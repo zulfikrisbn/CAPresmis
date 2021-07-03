@@ -13,11 +13,13 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DownloadDialogComponent } from './home/dialog/download-dialog/download-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    DownloadDialogComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -38,6 +40,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    DownloadDialogComponent
+  ]
 })
 export class AppModule { }

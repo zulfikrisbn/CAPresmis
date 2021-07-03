@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Download Property Details</h2>
+<mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>City/Town</mat-label>
+        <mat-select>
+            <mat-option value="one">Skudai</mat-option>
+            <mat-option value="two">Kulai</mat-option>
+            <mat-option value="three">Senai</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Download PDF</button>
+    <button mat-flat-button [mat-dialog-close]="true" cdkFocusInitial style="background-color: #1d6f42;">
+        Download
+        <mat-icon>picture_as_pdf</mat-icon>
+    </button>
+</mat-dialog-actions>
